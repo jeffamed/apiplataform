@@ -16,7 +16,7 @@ class InventarioController extends Controller
     {
         $inventarios = Inventario::orderBy('Codigo','asc')->get();
 
-        return response()->json(['inventarios' => $inventarios]);
+        return response()->json($inventarios,200);
     }
 
     /**

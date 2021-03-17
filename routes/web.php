@@ -17,5 +17,6 @@ use App\Http\Controllers\InventarioController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/inventario',[InventarioController::class,'index'])->name('inventario.index');
+//Route::group(['middleware' => ['cors']], function () {
+    Route::get('/inventario',[InventarioController::class,'index'])->name('inventario.index');
+//});
